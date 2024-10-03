@@ -1,0 +1,114 @@
+<!-- HTML and CSS for text over image widget -->
+<div class="text-over-image">
+    <div class="image-container">
+        <img src="https://topfurniture.co.nz/wp-content/uploads/2024/10/modern-bright-interiors-3d-rendering-illustration-min-scaled.jpg" alt="Furniture" class="overlay-image">
+        <div class="overlay"></div>
+        <div class="text-overlay">
+            <h2>The Home of Luxury Designer Furniture</h2>
+            <p>Here at Top Furniture NZ, we are proud to bring to you New Zealand's finest small designer chairs, sofas, and tables—lending elegance, style, and affordability to your home decor. Our commitment to top furniture, top design, top deals, and top quality provides unbeatable value and elegance in every piece.
+             </p>
+        </div>
+    </div>
+</div>
+
+<style>
+.text-over-image {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden; 
+}
+
+.overlay-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+    width: 80%; 
+}
+
+.text-overlay h2 {
+    font-size: 2em;
+    color: white;
+    margin: 0;
+}
+
+.text-overlay p {
+    font-size: 1.2em;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+    .image-container {
+        height: 300px; 
+    }
+    .overlay-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .text-overlay {
+        padding: 15px;
+        width: 90%;
+    }
+    .text-overlay h2 {
+        font-size: 2em; 
+    }
+    .text-overlay p {
+        font-size: 1.2em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        height: 500px;
+        overflow: hidden;
+        display: flex;
+    }
+    .overlay-image {
+        min-width: 100%; 
+        min-height: 100%; 
+        object-fit: cover;
+    }
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.4);  
+    }
+    .text-overlay {
+        padding: 10px;
+        width: 95%;
+    }
+    .text-overlay h2 {
+        font-size: 2em;
+    }
+    .text-overlay p {
+        font-size: 1em;
+    }
+}
+</style>
