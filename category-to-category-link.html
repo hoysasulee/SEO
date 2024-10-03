@@ -1,0 +1,52 @@
+<div class="section-seo-container related-categories">
+  <h2 class="section-header">Categories Related to Outdoor Lounge Chairs &amp; Sun Loungers</h2>
+  <ul id="seo-categories" class="seo-related-links list-closed" aria-live="polite">
+    <li><a href="/sun-loungers">Sun Loungers</a></li>
+    <li><a href="/plastic-chairs">Modern Plastic Chairs</a></li>
+    <li><a href="/taupe-furniture">Taupe Furniture</a></li>
+    <li><a href="/grey-armchairs">Grey Armchairs</a></li>
+    <li><a href="/cord-chairs">Cord Chairs</a></li>
+    <li><a href="/white-wood-chairs">White Wood Chairs</a></li>
+    <li><a href="https://www.cb2.com/outdoor/outdoor-chairs/1/filters/armless-resin-wicker-5">Armless Resin Wicker Outdoor Chairs</a></li>
+  </ul>
+  <button class="view-more-seo-category" aria-expanded="false">Show All</button>
+</div>
+
+<style>
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section-seo-container li {
+    display: none;
+    margin: 0.5em;
+}
+
+.section-seo-container li.visible,
+.section-seo-container li:nth-child(-n+5) {
+    display: inline-block;
+}
+
+.view-more-seo-category {
+    margin: 0.5em;
+    padding: 0;
+    display: inline-block;
+    background: none;
+    border: none;
+    font-family: var(--webfont-primary, sans-serif);
+    text-decoration: underline;
+    cursor: pointer;
+}
+</style>
+
+<script>
+document.querySelector('.view-more-seo-category').addEventListener('click', function() {
+    const listItems = document.querySelectorAll('#seo-categories li');
+    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+    listItems.forEach((item, index) => item.classList.toggle('visible', !isExpanded || index < 5));
+    this.setAttribute('aria-expanded', !isExpanded);
+    this.textContent = isExpanded ? 'Show All' : 'Show Less';
+});
+</script>
