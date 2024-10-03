@@ -1,0 +1,63 @@
+<div class="footer-links">
+  <input type="checkbox" id="check_id_footer_links" /><label for="check_id_footer_links"></label>
+  <div class="content">
+    <ul>
+      <li><a href="https://centrallakesremovals.co.nz/furniture-movers/">Furniture Removal</a></li>
+      <li><a href="https://centrallakesremovals.co.nz/residential-movers/">House/Residential
+Moving</a></li>
+      <li><a href="https://centrallakesremovals.co.nz/long-distance-movers/">Long Distance
+Moving</a></li>
+      <li><a href="https://centrallakesremovals.co.nz/commercial-office-movers/">Business/Office/Commercial Movers</a></li>
+      <li><a href="https://centrallakesremovals.co.nz/piano-movers/">Piano Movers</a></li>
+      <li><a href="https://centrallakesremovals.co.nz/packing-and-moving/">Packing & Moving
+Services</a></li>
+    </ul>
+  </div>
+</div>
+
+<style>
+.footer-links [type="checkbox"] {
+    display: none;
+  }
+  .footer-links .content {
+    padding-top: 50px;
+  }
+  .footer-links .content ul {
+    list-style:none;
+    margin: 0;
+    padding: 0;
+  }
+.footer-links .content ul li {
+	margin: 10px 0;
+    line-height: 20px;	
+}
+  .footer-links .content ul a{
+    text-decoration: none;
+    word-break: break-word;
+  }
+  .footer-links label {
+    display: block;
+    cursor: pointer;
+  }
+  .footer-links label:before {
+    position: absolute;
+  }
+  .footer-links input[type="checkbox"]~div {
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+  }
+  .footer-links [type="checkbox"]:checked~div {
+    max-height: 9999px;
+  }
+  .footer-links [type="checkbox"]:checked+label {
+    top: 100%;
+  }
+  .footer-links label:before {
+    content: 'Popular Links +';
+    text-decoration: none;
+  }
+  .footer-links [type="checkbox"]:checked+label:before {
+    content: 'Read Less';
+  }
+</style>
