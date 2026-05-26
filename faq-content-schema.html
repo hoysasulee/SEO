@@ -90,11 +90,11 @@ div#gridThumbs {
     grid-template-columns: repeat(2,minmax(0,1fr));
 }
 :root {
-        --fp-border-color: black;
-        --fp-faq-margins: 5px;
-        --fp-hover-color: rgba(0, 0, 0, 0.05);
-        --fp-open-character: "+";
-        --fp-closed-character: "-";
+        --border-color: black;
+        --faq-margins: 5px;
+        --hover-color: rgba(0, 0, 0, 0.05);
+        --open-character: "+";
+        --closed-character: "-";
       }
 
       .custom-collection summary {
@@ -105,9 +105,9 @@ div#gridThumbs {
 
         cursor: pointer;
 
-        border-top: 1px solid var(--fp-border-color);
+        border-top: 1px solid var(--border-color);
 
-        padding: 15px var(--fp-faq-margins);
+        padding: 15px var(--faq-margins);
         box-sizing: border-box;
       }
 
@@ -117,21 +117,21 @@ div#gridThumbs {
       }
 
       .custom-collection .answer {
-        margin: 0 var(--fp-faq-margins);
+        margin: 0 var(--faq-margins);
       }
 
       .custom-collection summary::after {
-        content:  var(--fp-open-character);
+        content:  var(--open-character);
         margin-right: 15px;
         display: block;
       }
 
       .custom-collection summary:hover {
-        background: var(--fp-hover-color);
+        background: var(--hover-color);
       }
 
       .custom-collection details[open] summary::after {
-        content: var(--fp-closed-character);
+        content: var(--closed-character);
       }
 
       .custom-collection details summary::-webkit-details-marker {
